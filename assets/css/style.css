@@ -1,0 +1,499 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+/* Bootstrap 5 ブレークポイント 中デバイス（タブレット, 992px 未満） */
+#header {
+  background: #fff;
+  /* transition: all 0.5s; */
+  /* z-index: 997; */
+  padding: 15px 0; /* 上下 | 左右 */
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1); /* 左右 | 上下 | ぼかし | 色 */
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu > ul {
+  display: flex;
+}
+
+/* padding: 上 | 右 | 下 | 左 */
+.nav-menu > ul > li {
+  position: relative;
+  /* white-space: nowrap; */
+  padding: 10px 0 10px 28px;
+}
+
+.nav-menu a {
+  /* display: block; */
+  position: relative;
+  color: #111;
+  transition: 0.3s;
+  /* font-size: 13px; */
+  text-transform: uppercase;
+  font-weight: 600;
+  /* font-family: "Roboto", sans-serif; */
+}
+
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
+  color: #ddd;
+}
+
+
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+}
+
+/* モバイル用 アイコン 色 切り替え メニュー非選択時 (activeなし) (モバイル用 Toggle メニュー アイコン) */
+.mobile-nav-toggle i {
+  color: #000;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  z-index: 9999;
+  overflow-y: auto;
+  background: #fff;
+  transition: ease-in-out 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.mobile-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  color: #111;
+  padding: 10px 20px;
+  font-weight: 500;
+  outline: none;
+}
+
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+  color: #ddd;
+  text-decoration: none;
+}
+
+
+
+.mobile-nav-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  display: none;
+  transition: ease-in-out 0.2s;
+}
+
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* モバイル用 アイコン 色 切り替え  メニュー選択時 (activeあり) (モバイル用 Toggle メニュー閉じる アイコン) */
+.mobile-nav-active .mobile-nav-toggle i {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Header Social Links
+--------------------------------------------------------------*/
+.header-social-links {
+  padding-left: 14px;
+  margin-left: 20px;
+  border-left: 1px solid #c4c4c4;
+}
+
+.header-social-links a {
+  color: #a0a0a0;
+  padding-left: 6px;
+  /* display: inline-block; */
+  /* line-height: 1px; */
+  transition: 0.3s;
+}
+
+.header-social-links a:hover {
+  color: #000;
+}
+
+/* padding: 上 | 右 | 下 | 左 */
+@media (max-width: 768px) {
+  .header-social-links {
+    padding: 0 48px 0 0;
+    border-left: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header Toggle
+--------------------------------------------------------------*/
+/* Bootstrap 5 ブレークポイント 中デバイス（タブレット, 992px 未満） */
+/*
+  offcanvas-collapse
+  中デバイス(toggle 非押下状態 メニュー非表示)
+  top ： Height of navbar
+
+  offcanvas-collapse.open
+  中デバイス(toggle 押下状態 メニュー表示)
+  z-index ： Above the carousel
+  */
+
+/* @media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 86px;
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  .offcanvas-collapse.open {
+    visibility: visible;
+    z-index: 3;
+    transform: translateX(-100%);
+  }
+} */
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+/* Header分スペース */
+#hero {
+  padding-top: 67px;
+}
+
+/*--------------------------------------------------------------
+# Staff Section
+--------------------------------------------------------------*/
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  /* font-size: 18px; */
+  /* background: #fff; */
+
+  /* Center slide text vertically */
+  /* display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; */
+}
+
+/* .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
+} */
+
+/* 背景画像*/
+.staff {
+  /* background: url("../img/chefs-bg.jpg") center center no-repeat; */
+  background: url("../img/staff/staff-bg.jpg") center center no-repeat;
+  background-size: cover;
+  padding: 60px 0; /* 上下 | 左右 */
+  position: relative;
+}
+
+/* 背景画像 透過カラーを重ねる  */
+.staff::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 9;
+}
+
+/* 背景画像 透過カラーを重ねた後、タイトルなどのコンテンツは明示的にz-indexを上げる */
+.staff .container {
+  position: relative;
+  z-index: 10;
+}
+
+/* .testimonials .testimonial-item .testimonial-img {
+  width: 100px;
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 0.15);
+  margin: 0 auto;
+} */
+
+.staff-member-img {
+  width: 125px;
+  border-radius: 50%;
+  border: 2px solid rgba(96, 96, 96, 0.15);
+  margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+# Shop Menu Section
+--------------------------------------------------------------*/
+.shopMenu .icon-box {
+  /* text-align: center; */
+  padding: 30px 20px 50px 20px;
+  /* transition: all ease-in-out 0.3s; */
+  background: #fff;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio #portfolio-flters {
+  /* padding: 0; */
+  /* margin: 0 auto 50px auto; */
+  list-style: none;
+  /* text-align: center; */
+}
+
+.portfolio #portfolio-flters li {
+  /* cursor: pointer; */
+  display: inline-block;
+  padding: 8px 15px 10px 15px; /* padding: 上 | 右 | 下 | 左 */
+  /* font-size: 14px; */
+  /* font-weight: 400; */
+  /* line-height: 1; */
+  text-transform: uppercase;
+  /* color: #4d4643; */
+  transition: all 0.3s 0s ease;
+  border-radius: 4px;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #fff;
+  background: #000;
+}
+
+/* muuri  specification */
+/* muuri コンテナ要素 positoinプロパティに、 relative、absolute、fixed */
+.portfolio-container {
+  position: relative;
+}
+
+/* muuri specification */
+/* muuri アイテム要素 positionプロパティにはabsolute、 displayプロパティにはblockが指定されている必要があります */
+.portfolio-item {
+  display: block;
+  position: absolute;
+  /* margin: 5px; */
+  z-index: 1;
+  color: #000;
+  /* border: 1px solid #000; */
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+.contact .info-box {
+  /* color: #444444; */
+  text-align: center;
+  /* box-shadow: 0 0 30px rgba(214, 215, 216, 0.3); */
+  /* padding: 20px 0 30px 0; */
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  display: none; /* window.scrollY = 0 読み込み時、一瞬表示防止。その後はfade処理で適宜変更 */
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  right: 15px;
+  bottom: 15px;
+  background: #000;
+  color: #fff;
+  transition: display 0.5s ease-in-out;
+  z-index: 99999;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.back-to-top:hover {
+  color: #000;
+  background: #ddd;
+  transition: 0.3s ease-in-out;
+}
+
+/* TOP戻りアイコン アニメーション指定 フェードイン */
+@keyframes fadeIn-keyframes {
+  /* アニメーションの開始から終了までの経過を 0% から 100% で指定 */
+  /*透明度指定 値:0 透明 から 値:1 不透明 */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* TOP戻りアイコン アニメーション指定 フェードアウト */
+@keyframes fadeOut-keyframes {
+  /* アニメーションの開始から終了までの経過を 0% から 100% で指定 */
+  /*透明度指定 値:1 不透明 から 値:0 透明 */
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/*
+  【補足】animation (https://www.ecco.jp/blog/css-animation/)
+    1.アニメーション名 [ animation-name ]
+    2.開始から終了までの時間 [ animation-duration ]
+    3.イージング [ animation-timing-function ] ※ease-in ease-out とか
+    4.実行までの待ち時間 [ animation-de lay ]
+    5.繰り返し回数 [ animation-iteration-count ]
+    6.終了後に逆再生するか [ animation-direction ]
+    7.再生前、再生後に適用するスタイル [ animation-fill-mode ]
+
+    animate: [ 1. 名前 ] [ 2. 時間 ] [ 3. イージング ] [ 4. 待ち ] [ 5. 繰り返し ] [ 6. 逆再生 ] [ 7. 終了後 ];
+
+    例
+    animation: fade .4s ease-in-out .2s 1 normal forwards;
+    [ fade ] を [ 0.4秒 ] かけて [ 最初と最後ゆっくり ] 、[ 0.2秒後 ] に [ 1回 ] 、 [ 通常再生 ] で実行し [ 最後のスタイルで終了 ] してください。
+*/
+
+/* TOP戻りアイコン アニメーション適用 フェードイン */
+.fadein {
+  display: block;
+  animation: fadeIn-keyframes 2s ease 0s 1 normal forwards;
+}
+
+/* TOP戻りアイコン アニメーション適用 フェードアウト */
+.fadeout {
+  display: none;
+  animation: fadeOut-keyframes 2s ease 0s 1 normal forwards;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #444;
+}
+
+#footer .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  /* line-height: 1; */
+  padding: 8px 0;
+  /* margin-right: 4px; */
+  border-radius: 4px;
+  /* text-align: center; */
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .social-links a:hover {
+  background: #ddd;
+  color: #000;
+  /* text-decoration: none; */
+}
+
+#footer .copyright {
+  color: #fff;
+  /* font-size: 13px; */
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+
+.section-title {
+  text-align: center;
+  /* padding-bottom: 30px; */
+}
+
+.section-bg {
+  background-color: #f7f7f7;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+a {
+  text-decoration: none;
+}
+
+/* a:hover {
+  color: #2ae149;
+  text-decoration: none;
+} */
